@@ -4,8 +4,12 @@
     <div class="container">
 
       <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+        <h1>Repositório de Produções</h1>
+        <p class="lead">Selecione a opção no menu acima*</p>
+        <br />
+        <br />
+        <br />
+        <p> *Este layout é temporário e não reflete as intenções para o visual final da plataforma,<br>sendo apenas usado para teste das funcionalidades.</p>
       </div>
 
     </div><!-- /.container -->
