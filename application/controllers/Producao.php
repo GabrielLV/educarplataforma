@@ -18,19 +18,29 @@ class Producao extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
-	{
+	public function index(){
             $this->load->view('includes/header');
             $this->load->view('includes/menu');
             $this->load->view('listar_producao');
             $this->load->view('includes/footer');
 	}
         
-        public function cadastro()
-	{
+    public function cadastro(){
             $this->load->view('includes/header');
             $this->load->view('includes/menu');
             $this->load->view('cadastro_producao');
             $this->load->view('includes/footer');
+	}
+
+	public function cadastrar(){
+		$data['titulo'] = $this->input->post('titulo');
+		$data['autores'] = $this->input->post('autor');
+		$data['descricao'] = $this->input->post('descricao');
+		$data['areas_idareas'] = $this->input->post('area');
+		$data['link'] = $this->input->post('link');
+
+		if($this->db->insert('producoes', $data)){
+			redirect('producao');
+		}
 	}
 }
